@@ -70,7 +70,7 @@ body{
 }
 .home {
     height: 100vh;
-    background: url('/images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
+    background: url('images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
     /* background: #0c2436; */
     display: flex;
     align-items: center;
@@ -207,7 +207,7 @@ body{
 }
 .project{
     height: 100vh;
-    background: url('/images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
+    background: url('images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
     background: #081b29;
     display: flex;
     align-items: center;
