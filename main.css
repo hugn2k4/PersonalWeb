@@ -1,0 +1,494 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+    scroll-behavior: smooth;
+}
+body{
+    color:#ededed;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+.logo span {
+    display: block;
+    text-align: left;
+}
+.logo{
+    position: relative;
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar a{
+    font-size: 25px;
+    color: #ededed;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 35px;
+    transition: .3s;
+}
+.navbar a:hover,
+.navbar a.active{
+    color: #00abf0;
+}
+#animated-h1 {
+    font-size: 48px;
+    font-weight: bold;
+    color: #00abf0;
+}
+#animated-text {
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #00abf0;
+    display: inline-block;
+    vertical-align: bottom;
+}
+.home {
+    height: 100vh;
+    background: url('/images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
+    /* background: #0c2436; */
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.home-content{
+    max-width: 600px;
+    position: absolute;
+    width: 40vw; 
+    height: 40vh;
+}
+.home-content h1{
+    position: relative;
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+.home-content h3{
+    position: relative;
+    font-size: 32px;
+    font-weight: 700;
+    color: #00abf0;
+}
+.home-content p{
+    position: relative;
+    font-size: 16px;
+    margin: 20px 0 40px;
+}
+.home-content .btn-box{
+    position: relative;
+    display: flex;
+    width: auto;
+    height: 50px;
+}
+.btn-box a{
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    height: 100%;
+    padding: 20px;
+    background: #00abf0;
+    border: 2px solid #00abf0;
+    border-radius: 8px;
+    font-size: 19px;
+    color: #081b29;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.btn-box a:hover{
+    color: #00abf0;
+}
+.btn-box a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: #081b29;
+    z-index: -1;
+    transition: .5s;
+}
+.btn-box a:hover::before{
+    width: 100%;
+}
+.home-sci{
+    position: absolute;
+    bottom: 40px;
+    width: 170px;
+    display: flex;
+    justify-content: space-between;
+}
+.home-sci a{
+    position: relative;
+    display: inline-flex;   
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00abf0;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00abf0;
+    text-decoration: none;
+    z-index: 1;
+    overflow: hidden;
+    transition: .5s;
+}
+.home-sci a:hover{
+    color: #081b29;
+}
+.home-sci a::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: #00abf0;
+    z-index: -1;
+    transition: .5s;
+}
+.home-sci a:hover:before{
+    width: 100%;
+}
+.home-avatar {
+    display: flex;
+    justify-content: flex-end; /* Căn sang bên phải */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của phần tử chứa */
+    height: 100vh; /* Chiều cao toàn bộ viewport hoặc chiều cao tùy chọn */
+    padding: 20px;
+}
+
+.avatar {
+    width: 500px; /* Kích thước ảnh */
+    height: 500px;
+    border-radius: 50%; /* Bo tròn thành hình tròn */
+    object-fit: cover; /* Đảm bảo ảnh luôn được hiển thị đầy đủ */
+    border: 3px solid #3498db; /* Thêm viền */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hiệu ứng khi hover */
+}
+.avatar:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Bóng đậm hơn khi hover */
+    transform: scale(1.05); /* Phóng to nhẹ khi hover */
+}
+.project{
+    height: 100vh;
+    background: url('/images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
+    background: #081b29;
+    display: flex;
+    align-items: center;
+    padding: 0 10%;
+}
+.table-project {
+    position: absolute;
+    top: 30%;
+    right: 10%;
+    width: 40vw; /* Chiều rộng dựa theo chiều rộng của viewport */
+    height: 40vh; /* Chiều cao dựa theo chiều cao của viewport */
+    background-color: rgba(21, 113, 150, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    overflow: hidden;
+    flex-wrap: wrap
+}
+
+.table-project ul {
+    list-style-type: none; /* Bỏ dấu chấm đầu dòng */
+    padding: 0;
+}
+
+.table-project li {
+    margin: 15px 0; /* Tạo khoảng cách giữa các mục */
+}
+
+.table-project a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.table-project a:hover {
+    color: #00abf0; /* Thay đổi màu khi hover */
+}
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    row-gap: 30px;
+    background: #0f2636;
+    color: #efefef;
+    padding-block: 40px 60px;
+}
+.top-footer p {
+    font-size: 25px;
+    font-weight: 600;
+}
+.middle-footer .footer-menu {
+    display: flex;
+}
+.footer-menu_list {
+    list-style: none;
+}
+.footer-menu_list a {
+    text-decoration: none;
+    color: #ededed;
+    font-weight: 500;
+    margin-inline: 20px;
+}
+.bottom-footer p {
+    padding-bottom: 30px;
+}
+.footer-social-icons {
+    display: flex;
+    gap: 30px;
+}
+.footer-social-icons .icon {
+    color: rgba(251, 250, 250, 0.9);
+}
+.footer-social-icons .icon:hover {
+    color: #efefef;
+}
+
+.about {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #0a263b;
+    padding: 0 10%;
+}
+
+.about-container {
+    display: flex;
+    align-items: center;
+    max-width: 2000px;
+    gap: 40px;
+    margin-top: 120px;
+}
+
+.about-image img {
+    width: auto; 
+    height: 70vh;
+    border-radius: 5%; /* Làm tròn góc nhẹ cho ảnh */
+    object-fit: cover; /* Đảm bảo ảnh không bị biến dạng */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng cho ảnh */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Hiệu ứng chuyển động khi hover */
+    border: 2px solid #144c72;
+    margin-right: 50px;
+}
+/* Thêm hiệu ứng hover */
+.about-image img:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Tăng độ đổ bóng khi hover */
+    transform: scale(1.05); /* Phóng to ảnh một chút khi hover */
+}
+.about-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: #00abf0;
+    margin-bottom: 20px;
+}
+.about-content h3 {
+    font-size: 23px;
+    font-weight: 600;
+    color: #00c8ff; 
+    margin-bottom: 10px; /* Khoảng cách dưới để tách h3 khỏi nội dung bên dưới */
+}
+.about-content p {
+    font-size: 16px;
+    color: #ededed;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/*  */
+
+.project {
+    display: flex;
+    flex-direction: column;
+    background: #081e30;
+}
+
+.project h2 {
+    font-size: 36px; /* Kích thước chữ cho tiêu đề */
+    color: #00abf0; /* Màu chữ cho tiêu đề */
+    margin-top: 140px;
+    margin-bottom: 70px;
+}
+
+.project-container {
+    display: flex;
+    flex-wrap: wrap; /* Để các thẻ có thể xuống dòng khi không đủ không gian */
+    gap: 40px; /* Khoảng cách giữa các thẻ */
+    justify-content: center; /* Căn giữa các thẻ */
+    padding: 20px; /* Padding cho container */
+    max-height: 550px; /* Giới hạn chiều cao tối đa cho container */
+    overflow-y: auto;
+}
+
+.project-card {
+    display: flex; /* Sắp xếp theo chiều ngang */
+    width: 600px; /* Chiều rộng cố định cho mỗi thẻ */
+    height: 230px; /* Chiều cao cố định cho mỗi thẻ */
+    background: #95bdd8; /* Màu nền cho thẻ dự án */
+    border-radius: 10px; /* Bo tròn góc */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng */
+    overflow: hidden; /* Ẩn những phần ra ngoài thẻ */
+    text-align: center; /* Căn giữa nội dung bên trong */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+.project-card:hover {
+    transform: translateY(-5px); /* Dịch chuyển lên một chút khi hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng độ bóng khi hover */
+}
+
+.project-card-image {
+    width: 30%; /* Chiếm 30% chiều rộng của thẻ card */
+    height: 94%; /* Đảm bảo chiều cao bằng chiều cao thẻ card */
+    display: flex; /* Sử dụng flex để căn giữa nội dung bên trong */
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border: 2px solid #0c3b70; /* Thêm khung cho ảnh */
+    border-radius: 8px; /* Bo tròn góc khung ảnh */
+    overflow: hidden; /* Ẩn những phần ảnh ra ngoài khung */
+    margin-right: 1%;
+    margin-top: 1%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer; /* Thay đổi con trỏ khi hover vào hình ảnh */
+}
+.project-card-image img {
+    width: 100%; /* Đảm bảo hình ảnh chiếm toàn bộ chiều rộng */
+    height: 100%; /* Giữ tỉ lệ cho hình ảnh */
+    transition: transform 0.3s ease; /* Hiệu ứng chuyển động cho ảnh */
+    object-fit: fill; /* Đảm bảo ảnh không bị biến dạng và giữ tỉ lệ */
+}
+.project-card-image:hover img {
+    transform: scale(1.1); /* Phóng to ảnh khi hover */
+}
+.project-card-image:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Thêm bóng cho ảnh khi hover */
+}
+
+.project-card-content {
+    width: 70%; /* Chiều rộng cho phần nội dung */
+    height: 100%; /* Chiều cao 100% cho thẻ nội dung */
+    padding: 10px; /* Thêm padding cho phần nội dung */
+    background: #95bdd8; /* Màu nền cho nội dung */
+    display: flex; /* Dùng flex để căn giữa nội dung bên trong */
+    flex-direction: column; /* Sắp xếp theo chiều dọc */
+    justify-content: center; /* Căn giữa theo chiều dọc */
+}
+
+.project-card-content h3 {
+    font-size: 24px;
+    color: #333333; /* Màu chữ tiêu đề */
+    margin: 10px 0; /* Khoảng cách trên và dưới tiêu đề */
+}
+
+.project-card-content p {
+    font-size: 16px; /* Kích thước chữ cho mô tả */
+    color: #292323; /* Màu chữ mô tả */
+    padding: 0 10px; /* Padding cho mô tả */
+    overflow: hidden; /* Ẩn phần văn bản vượt quá chiều cao */
+    text-overflow: ellipsis; /* Thêm dấu "..." ở cuối khi văn bản bị cắt */
+}
+
+/* CSS cho thanh cuộn trong trình duyệt WebKit */
+.project-container::-webkit-scrollbar {
+    width: 10px; /* Chiều rộng của thanh cuộn dọc */
+}
+
+.project-container::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Màu nền của thanh cuộn */
+    border-radius: 10px; /* Bo tròn góc thanh cuộn */
+}
+
+.project-container::-webkit-scrollbar-thumb {
+    background: #00abf0; /* Màu của phần tay cầm thanh cuộn */
+    border-radius: 10px; /* Bo tròn góc tay cầm thanh cuộn */
+}
+
+.project-container::-webkit-scrollbar-thumb:hover {
+    background: #0091c9; /* Màu khi hover vào tay cầm */
+}
+
+/* Responsive cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+
+/* Media queries cho màn hình nhỏ hơn */
+@media (max-width: 768px) {
+    .table-project {
+        width: 80vw; /* Chiếm nhiều diện tích hơn trên màn hình nhỏ */
+        height: auto; /* Chiều cao tự điều chỉnh */
+        top: 20%;
+        right: 10%;
+    }
+
+    .table-project ul {
+        font-size: 18px; /* Thu nhỏ font chữ trên màn hình nhỏ */
+    }
+}
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+@keyframes manipActiveHover{
+    100%{
+        pointer-events: auto;
+    }
+}
