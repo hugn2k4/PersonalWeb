@@ -69,6 +69,7 @@ body{
     vertical-align: bottom;
 }
 .home {
+    position: relative;
     height: 100vh;
     background: url('images/Wallpaper-4K-dep-27.jpg') no-repeat center/cover;
     /* background: #0c2436; */
@@ -77,6 +78,7 @@ body{
     padding: 0 10%;
 }
 .home-content{
+    position: relative;
     max-width: 600px;
     position: absolute;
     width: 40vw; 
@@ -193,6 +195,7 @@ body{
 }
 
 .avatar {
+    position: relative;
     width: 500px; /* Kích thước ảnh */
     height: 500px;
     border-radius: 50%; /* Bo tròn thành hình tròn */
@@ -420,6 +423,9 @@ footer {
     display: flex; /* Dùng flex để căn giữa nội dung bên trong */
     flex-direction: column; /* Sắp xếp theo chiều dọc */
     justify-content: center; /* Căn giữa theo chiều dọc */
+}
+.project-card-content:hover h3{
+    color: #36a0ca;
 }
 
 .project-card-content h3 {
